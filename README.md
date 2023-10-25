@@ -25,7 +25,7 @@ For run demo you have to perform this step:
 
 2 - Install Docker on your computer, download available here: [Docker Download](https://docs.docker.com/desktop/)
 
-3 - open your computer firewall for 8080 tcp port   
+3 - open your computer firewall for 8081 tcp port   
 for linux
 ```bash
     sudo ufw allow 8081
