@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Check Result</title>
+    <title>Duomondo</title>
     <script src="./js/endymion.js"></script>
     <link rel="stylesheet" href="./style/main.css">
     <script>
     window.onload = (event)=>{
         var voice = document.getElementById('audioPlayer');
-        var ippo = endymion.loadAsset("http://localhost:8000/assets/ippotest5.glb")
+
+        var ippo = endymion.loadAsset("assets/ippotest5.glb")
                                 .setPosition({ x: 0, y: -0.3, z: 0 })
                                 .setRotation({ x: -10, y: 220, z: 0 })
                                 .setScale({ x: 3, y: 3, z: 3 })
                                 .render();
+    
+       
         listenToTheSpirit = function() {
             endymion.with(ippo).playAnimation(1).apply();
             voice.play()
@@ -19,15 +22,20 @@
     }
     </script>
 </head>
+
+
+
 <body>
     <audio id="audioPlayer" src="./audio/demo_ippo.mp3"></audio>
+
     <div class="button-container">
-
-        <a class="button"; href="Successo_1.html">
-            <img src="./images/Completa_la_sfida.png" />
+        <a class="button" href="controllarisultato_1.html">
+            <img src="./images/Avvia_la_sfida.png" >
         </a>
-
+    
+        <div class="button"; onclick="listenToTheSpirit()">
+            <img src="./images/Ascolta_lo_spiritello.png">
+        </div>
     </div>
-
 </body>
 </html>
