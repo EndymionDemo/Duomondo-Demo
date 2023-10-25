@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Successo</title>
+        <script src="./js/endymion.js"></script>
+        <link rel="stylesheet" href="./style/main.css">
+    </head>
+    <script>
+        window.onload = (event)=>{
+
+            var voice = document.getElementById('audioPlayer');
+
+             listenToTheSpirit = function() {
+                endymion.with(ippo).playAnimation(1).apply();
+                voice.play()
+            }       
+        }
+
+        </script>
+
+<body>
+    <audio id="audioPlayer" src="./audio/complete_quest_requirement.mp3"></audio>
+
+    <div class="button-container">
+        <div class="button" onclick="listenToTheSpirit()">
+            <img src="./images/Congratulazioni.png">
+        </div>
+
+        <a class="button" style="width: 50%; height: 50%; text-align: center; margin: 0 auto;" href="QRcollezionati.html">
+            <img src="./images/controlla_progressi.png" style="width:50%;heigth:50%; margin:0 auto;">
+        </a>
+    </div>
+
+</body>
+</html>

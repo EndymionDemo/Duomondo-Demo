@@ -1,0 +1,14 @@
+.button-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+.button{
+    display: block;
+
+}
+.button img{
+    width: 100%;
+    height: auto;
+}
