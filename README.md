@@ -28,7 +28,7 @@ For run demo you have to perform this step:
 3 - open your computer firewall for 8081 tcp port   
 for linux
 ```bash
-    sudo ufw allow 8081
+    sudo ufw allow 8084
 ```
 for windows using powershell with admin privilege
 ```powershell
