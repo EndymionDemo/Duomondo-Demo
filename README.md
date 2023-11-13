@@ -32,7 +32,7 @@ for linux
 ```
 for windows using powershell with admin privilege
 ```powershell
-netsh advfirewall firewall add rule name="duomondo-demo" dir=in action=allow protocol=TCP localport=8081
+netsh advfirewall firewall add rule name="duomondo-demo" dir=in action=allow protocol=TCP localport=8084
 ```
     
 ## Run Locally
