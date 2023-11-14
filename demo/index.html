@@ -3,7 +3,7 @@
 <head>
     <title>Duomondo</title>
     <script src="./js/endymion.js"></script>
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="style/main.css">
     <script>
     window.onload = (event)=>{
         var voice = document.getElementById('audioPlayer');
@@ -14,10 +14,16 @@
                                 .setScale({ x: 3, y: 3, z: 3 })
                                 .render();
     
-       
+                                
         listenToTheSpirit = function() {
             endymion.with(ippo).playAnimation(1).apply();
             voice.play()
+        }
+
+        navigateToResult = function() {
+            voice.pause();
+            endymion.core.destroyObject(ippo.id);
+            window.location.href = "controllarisultato_1.html";
         }
     }
     </script>
@@ -29,9 +35,9 @@
     <audio id="audioPlayer" src="./audio/demo_ippo.mp3"></audio>
 
     <div class="button-container">
-        <a class="button" href="controllarisultato_1.html">
+        <button id="navigate" class="button" onclick="navigateToResult()">
             <img src="./images/Avvia_la_sfida.png" >
-        </a>
+        </button>
     
         <div class="button"; onclick="listenToTheSpirit()">
             <img src="./images/Ascolta_lo_spiritello.png">

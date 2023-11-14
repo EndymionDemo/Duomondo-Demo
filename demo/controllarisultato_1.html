@@ -3,24 +3,16 @@
 <head>
     <title>Check Result</title>
     <script src="./js/endymion.js"></script>
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="style/main.css">
     <script>
     window.onload = (event)=>{
-        var voice = document.getElementById('audioPlayer');
-        var ippo = endymion.loadAsset("assets/ippotest5.glb")
-                                .setPosition({ x: 0, y: -0.3, z: 0 })
-                                .setRotation({ x: -10, y: 160, z: 0 })
-                                .setScale({ x: 3, y: 3, z: 3 })
-                                .render();
-        listenToTheSpirit = function() {
-            endymion.with(ippo).playAnimation(1).apply();
-            voice.play()
-        }
+        
     }
     </script>
 </head>
 <body>
-    <audio id="audioPlayer" src="./audio/demo_ippo.mp3"></audio>
+    <iframe id="frame" scrolling="no" src="https://www.voicebook.cloud/svolgimentoministero/711"></iframe>
+
     <div class="button-container">
 
         <a class="button"; href="Successo_1.html">
