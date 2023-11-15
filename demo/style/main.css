@@ -1,29 +1,91 @@
+@font-face {
+    font-family: 'Bangers';
+    src: url(Bangers-Regular.ttf) format("truetype");
+    font-weight:300;
+}
+
+*{
+    font-family: Bangers;
+}
+
+.body-result{
+    transform : scale(1.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quiz-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container p:first-child{
+    color:blue;
+}
+
+.quiz-item-text{
+    padding: 25px 0;
+
+}
+.quiz-item div:first-child{
+    color:red;
+}
+
+ audio {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    transform: scale(1.5);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    display: block;
+    color: black;
+    cursor: pointer;
+    margin: 25px 0;
+}
+
+input[type="radio"]:checked + label {
+    color: lime;
+}
+
+.button-container.result{
+    position: absolute;
+    bottom: -200px;
+}
+
+.button.result{
+    display: block;
+    border: none;
+    background-color: transparent;
+    transform: scale(0.5);
+}
+
 .button-container{
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0;
 }
+
 .button{
     display: block;
     border: none;
     background-color: transparent;
 }
-.button img{
+
+.button img,
+.button.result img{
     width: 100%;
     height: auto;
 }
-#frame {
-        width: 100%;
-        height: 70vh; 
-        max-height: 730px;
-        overflow: hidden !important; 
-        margin-top: 200px;
-        zoom: 1;
-        -moz-transform: scale(1);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(1);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(1);
-        -webkit-transform-origin: 0 0;
-    }

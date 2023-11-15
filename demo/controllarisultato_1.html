@@ -4,22 +4,53 @@
     <title>Check Result</title>
     <script src="./js/endymion.js"></script>
     <link rel="stylesheet" href="style/main.css">
-    <script>
-    window.onload = (event)=>{
-        
-    }
-    </script>
+    <style>
+        body{
+            background-color: white !important;
+        }
+    </style>
 </head>
-<body>
-    <iframe id="frame" scrolling="no" src="https://www.voicebook.cloud/svolgimentoministero/711"></iframe>
+    <body class="body-result">
+        <div class="quiz-container">
+            <p>Listen to the audio and answer question.</p>
+            <div class="quiz-item-container">
+                <div class="quiz-item">
+                    <div class="quiz-item-text">What you can see?</div>
+                    <fieldset class="quiz-item-answers">
+                        <input type="radio" name="cansee" id="A" onclick="verify()"/><label for="A">Rock fold</label>
+                        <input type="radio" name="cansee" id="B" onclick="verify()"/><label for="B">Terra Verde Deposit</label>
+                    </fieldset>
+                </div>
+            </div>
+            
+        </div>
 
-    <div class="button-container">
+        <audio id="audio" src="./audio/audio_quiz.mp3" controls onclick="play()"></audio>
 
-        <a class="button"; href="Successo_1.html">
-            <img src="./images/Completa_la_sfida.png" />
-        </a>
+        <div class="button-container result">
+            <a id="success" class="button result"; href="Successo_1.html"">
+                <img src="./images/Completa_la_sfida.png" />
+            </a>
+        </div>
 
-    </div>
+        <script>
+            var successButton = document.getElementById("success");
+            successButton.style.display = "none";
 
-</body>
+            function play(){
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
+
+            function verify(){
+                var answer = document.querySelector('input[name="cansee"]:checked').id;
+                if(answer == "A"){
+                    successButton.style.display = "block";
+                }else{
+                    successButton.style.display = "none";
+                }
+            }
+
+        </script>
+    </body>
 </html>
